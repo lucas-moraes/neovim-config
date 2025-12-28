@@ -18,7 +18,7 @@ This is my personal Neovim configuration, written entirely in Lua. It is designe
 
 - Lazy.nvim: https://github.com/folke/lazy.nvim (Required - installed automatically)
 - FiraCore Nerd Font: https://www.nerdfonts.com/font-downloads (Required)
-- Ripgrep: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
+- Ripgrep: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation (Required)
 - LazyGit: https://github.com/jesseduffield/lazygit (Optional)
 - LazyDocker: https://github.com/jesseduffield/LazyDocker (Optional)
 - Zellij: https://zellij.dev/ (Optional)
