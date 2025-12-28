@@ -165,12 +165,12 @@ lualine.setup({
 			},
 			winbar = {
 				"neo-tree",
-				"packer",
+				"lazy",
 				"neo-tree filesystem [1]",
 				"toggleterm",
 			},
 		},
-		ignore_focus = { "neo-tree", "packer", "neo-tree filesystem [1]", "toggleterm" },
+		ignore_focus = { "neo-tree", "lazy", "neo-tree filesystem [1]", "toggleterm" },
 		always_divide_middle = true,
 		globalstatus = false,
 		refresh = {

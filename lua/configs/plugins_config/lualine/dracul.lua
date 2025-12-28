@@ -161,9 +161,9 @@ lualine.setup({
 		component_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = { "neo-tree", "neo-tree filesystem [1]", "toggleterm" },
-			winbar = { "neo-tree", "packer", "neo-tree filesystem [1]", "toggleterm" },
+			winbar = { "neo-tree", "lazy", "neo-tree filesystem [1]", "toggleterm" },
 		},
-		ignore_focus = { "neo-tree", "packer", "neo-tree filesystem [1]", "toggleterm" },
+		ignore_focus = { "neo-tree", "lazy", "neo-tree filesystem [1]", "toggleterm" },
 		always_divide_middle = true,
 		globalstatus = false,
 		refresh = {

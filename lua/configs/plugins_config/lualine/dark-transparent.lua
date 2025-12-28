@@ -172,7 +172,7 @@ lualine.setup({
 			},
 			winbar = {
 				"neo-tree",
-				"packer",
+				"lazy",
 				"neo-tree filesystem [1]",
 				"toggleterm",
 				"dap-repl",
@@ -186,7 +186,7 @@ lualine.setup({
 		},
 		ignore_focus = {
 			"neo-tree",
-			"packer",
+			"lazy",
 			"neo-tree filesystem [1]",
 			"toggleterm",
 		},
