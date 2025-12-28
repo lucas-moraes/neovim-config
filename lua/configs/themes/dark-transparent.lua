@@ -85,9 +85,6 @@ function theme.setup()
 	vim.api.nvim_set_hl(0, "Delimiter", { fg = dracula.comment })
 	vim.api.nvim_set_hl(0, "PunctuationBracket", { fg = dracula.comment })
 	vim.api.nvim_set_hl(0, "Special", { fg = dracula.cyan })
-	vim.api.nvim_set_hl(0, "IblIndent", { fg = dracula.gray })
-	vim.api.nvim_set_hl(0, "Ibl", { fg = dracula.gray })
-	vim.api.nvim_set_hl(0, "IblScope", { fg = dracula.cyan, bold = true })
 end
 
 return theme

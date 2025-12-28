@@ -67,9 +67,6 @@ function theme.setup()
 	vim.api.nvim_set_hl(0, "Delimiter", { fg = "#bf80ff" })
 	vim.api.nvim_set_hl(0, "PunctuationBracket", { fg = "#a37bff" })
 	vim.api.nvim_set_hl(0, "Special", { fg = "#bf80ff" })
-	vim.api.nvim_set_hl(0, "IblIndent", { fg = "#8b5fbf" })
-	vim.api.nvim_set_hl(0, "Ibl", { fg = "#8b5fbf" })
-	vim.api.nvim_set_hl(0, "IblScope", { fg = "#a037bf", bold = true })
 end
 
 return theme
