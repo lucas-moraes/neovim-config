@@ -104,7 +104,11 @@ else
 end
 
 wk.add({
-	{ "<leader>l", group = "LazyGit/LazyDocker" },
+	{ "<leader>l", group = "Lazy tools" },
+	{ "<leader>ll", ":Lazy<CR>", desc = "Lazy" },
+	{ "<leader>ls", ":Lazy sync<CR>", desc = "Lazy Sync" },
+	{ "<leader>lc", ":Lazy clean<CR>", desc = "Lazy Clean" },
+	{ "<leader>lu", ":Lazy update<CR>", desc = "Lazy Update" },
 	{ "<leader>lg", ":LazyGit<CR>", desc = "LazyGit" },
 	--{"<leader>ld", ":LazyDocker<CR>", desc = "LazyDocker"},
 })
@@ -113,11 +117,6 @@ wk.add({
 wk.add({
 	{ "<leader>m", "<CMD>MarkdownPreview<CR>", desc = "Markdown Preview" },
 	{ "<leader>mn", "<CMD>MarkdownPreviewStop<CR>", desc = "Markdown Preview Stop" },
-})
-
--- Atalho de teclado para PackerSync
-wk.add({
-	{ "<leader>ps", "<CMD>PackerSync<CR>", desc = "PackerSync" },
 })
 
 wk.add({ "<leader>p", vim.lsp.buf.definition, desc = "Mostrar documentação flutuante" })
