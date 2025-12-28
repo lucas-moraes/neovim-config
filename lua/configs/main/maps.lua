@@ -82,7 +82,7 @@ if status then
 		{ "<leader>f", group = "Telescope" },
 		{ "<leader>ff", telescope.find_files, desc = "Telescope Find Files" },
 		{ "<leader>fg", telescope.live_grep, desc = "Telescope Live Grep" },
-		{ "<leader>fb", telescope.current_buffer_fuzzy_find, desc = "Telescope current buffer" },
+		{ "<leader>fb", "<cmd>Telescope live_grep search_dirs=%:p<CR>", desc = "Telescope current buffer" },
 	})
 else
 	print("Telescope not found")

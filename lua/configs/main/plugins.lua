@@ -6,11 +6,6 @@ require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 
 	{
-		"mxsdev/nvim-dap-vscode-js",
-		dependencies = { "mfussenegger/nvim-dap" },
-	},
-
-	{
 		"mfussenegger/nvim-dap",
 		dependencies = {
 			"mxsdev/nvim-dap-vscode-js",
@@ -98,9 +93,7 @@ require("lazy").setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		build = function()
-			require("nvim-treesitter.install").update({ with_sync = true })
-		end,
+		build = ":TSUpdate",
 		config = function()
 			require("configs.plugins_config.treesitter")
 		end,
@@ -132,26 +125,9 @@ require("lazy").setup({
 		end,
 	},
 
-	"mg979/vim-visual-multi",
-	"terryma/vim-multiple-cursors",
-
 	{
 		"nvim-telescope/telescope.nvim",
-		version = "0.1.6",
 		dependencies = { "nvim-lua/plenary.nvim" },
-	},
-
-	{
-		"nvim-telescope/telescope-live-grep-args.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim" },
-		config = function()
-			require("configs.plugins_config.live-grep-args")
-		end,
-	},
-
-	{
-		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 
 	{ "onsails/lspkind-nvim" },
