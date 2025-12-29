@@ -119,7 +119,36 @@ wk.add({
 	{ "<leader>mn", "<CMD>MarkdownPreviewStop<CR>", desc = "Markdown Preview Stop" },
 })
 
-wk.add({ "<leader>p", vim.lsp.buf.definition, desc = "Mostrar documentação flutuante" })
+wk.add({
+	"<leader>p",
+	function()
+		vim.lsp.buf.definition({
+			on_list = function(options)
+				local items = vim.tbl_filter(function(item)
+					return not item.filename:match("node_modules")
+				end, options.items)
+
+				if vim.tbl_isempty(items) then
+					vim.notify("Nenhuma definição fora de node_modules", vim.log.levels.INFO)
+					return
+				end
+
+				vim.ui.select(items, {
+					prompt = "Definições",
+					format_item = function(item)
+						return string.format("%s:%d:%d", vim.fn.fnamemodify(item.filename, ":~:."), item.lnum, item.col)
+					end,
+				}, function(choice)
+					if choice then
+						vim.cmd("edit " .. choice.filename)
+						vim.api.nvim_win_set_cursor(0, { choice.lnum, choice.col - 1 })
+					end
+				end)
+			end,
+		})
+	end,
+	desc = "Mostrar documentação flutuante",
+})
 
 wk.add({ "<leader>se", vim.diagnostic.open_float, desc = "Mostrar diagnóstico flutuante" })
 
